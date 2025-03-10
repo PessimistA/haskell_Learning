@@ -16,3 +16,16 @@ polindrome x = x == reverse x
 reverse1 :: [a] -> [a]
 reverse1 [] = [] 
 reverse1 (x:xs) = reverse1 xs ++ [x]
+
+evenNumbers :: [Int] -> [Int]
+evenNumbers xs = [x | x <- xs, x `mod` 2 == 0]
+
+calculator :: Int -> Int -> String ->Int
+calculator x y "+"= x+y
+calculator x y "-"= x-y
+calculator x y "*"= x*y
+calculator x y "/"= x `div` y
+
+minİndex :: [Int] -> Int
+minİndex [x]=x
+minİndex (x:xs) = min x (minİndex xs)
