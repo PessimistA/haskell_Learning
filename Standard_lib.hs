@@ -9,3 +9,6 @@ fibonacci n=fibonacci (n-1)+fibonacci(n-2)
 
 factorial 1=1// 1 de durur
 factorial n= n*factorial(n-1)
+
+polindrome:: String->Bool
+polindrome x = x == reverse x 
