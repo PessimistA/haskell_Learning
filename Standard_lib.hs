@@ -12,3 +12,7 @@ factorial n= n*factorial(n-1)
 
 polindrome:: String->Bool
 polindrome x = x == reverse x 
+
+reverse1 :: [a] -> [a]
+reverse1 [] = [] 
+reverse1 (x:xs) = reverse1 xs ++ [x]
