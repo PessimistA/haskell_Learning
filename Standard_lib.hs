@@ -29,3 +29,15 @@ calculator x y "/"= x `div` y
 minİndex :: [Int] -> Int
 minİndex [x]=x
 minİndex (x:xs) = min x (minİndex xs)
+
+isPrime :: Int -> Bool
+isPrime n
+    | n < 2     = False
+    | otherwise = not (hasDivisor n 2)
+
+hasDivisor :: Int -> Int -> Bool
+hasDivisor n i
+    | i * i > n  = False    
+    | n `mod` i == 0 = True 
+    | otherwise   = hasDivisor n (i + 1) 
+
