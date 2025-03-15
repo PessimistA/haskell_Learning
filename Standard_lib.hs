@@ -41,3 +41,7 @@ hasDivisor n i
     | n `mod` i == 0 = True 
     | otherwise   = hasDivisor n (i + 1) 
 
+isEven ::Int ->Bool
+isEven n
+    | n `mod` 2==0= True //altgr , ile yap yatay tırnak işaretini
+    | n `mod` 2==1= False 
