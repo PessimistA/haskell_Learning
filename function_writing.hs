@@ -32,3 +32,29 @@ product2 (x:xs) = (x)+ (product2 xs)
 reverse1 :: [Int] -> [Int]
 reverse1 [] =[]
 reverse1 (x:xs) = (reverse1 xs) ++ [x]
+
+factorail1 :: (Eq t, Num t) => t -> t
+factorail1 0=0
+factorail1 1=1
+factorail1 n= n* factorail1(n-1)
+
+square :: (Num t) => t-> t
+square n = n*n
+
+triple :: (Num t) => t-> t
+triple n = n*n*n
+
+kok ::(Num t,Floating t)=> t-> t
+kok n= sqrt n
+
+add :: (Num a) => a-> a->a
+add x y = x+y
+
+multiple :: (Num a) => a-> a->a
+multiple x y = x*y
+
+divide :: Integral a => a -> a -> a
+divide x y = x `div` y
+
+extract :: (Num a) => a-> a-> a
+extract x y = x-y
