@@ -66,6 +66,9 @@ asal n i | i> n-1 = True
 	 | otherwise = asal n (i+1)
 
 
-take1 n i = take2 n i 0
-take2 (x:xs) i j | i==j =return()
-	    	 | x : take2 xs i (j+1) 
+take11 ::[a]->Int-> [a]
+take11 n i = take22 n i 0
+take22:: [a]->Int -> Int -> [a]
+take22 [] _ _ =[]
+take22 (x:xs) i j |i == j 	=[]
+	    	  |x : take22 xs i (j+1) 
