@@ -64,3 +64,8 @@ asal_mi n= asal n 2
 asal n i | i> n-1 = True
 	 | n `mod` i == 0 = False
 	 | otherwise = asal n (i+1)
+
+
+take1 n i = take2 n i 0
+take2 (x:xs) i j | i==j =return()
+	    	 | x : take2 xs i (j+1) 
