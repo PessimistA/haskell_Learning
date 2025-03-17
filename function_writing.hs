@@ -66,9 +66,14 @@ asal n i | i> n-1 = True
 	 | otherwise = asal n (i+1)
 
 
+add_list :: [a]->[a]->[a]
+add_list [] ys = ys
+add_list (x:xs) ys = x: add_list xs ys
+
 take11 ::[a]->Int-> [a]
-take11 n i = take22 n i 0
+take11 xs n = take22 xs n 0
+
 take22:: [a]->Int -> Int -> [a]
 take22 [] _ _ =[]
-take22 (x:xs) i j |i == j 	=[]
-	    	  |x : take22 xs i (j+1) 
+take22 (x:xs) n j |j == n 	=[]
+	    	  |otherwise= x : take22 xs n (j+1) 
