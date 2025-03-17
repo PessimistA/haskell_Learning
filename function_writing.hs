@@ -58,3 +58,9 @@ divide x y = x `div` y
 
 extract :: (Num a) => a-> a-> a
 extract x y = x-y
+
+asal_mi n= asal n 2
+
+asal n i | i> n-1 = True
+	 | n `mod` i == 0 = False
+	 | otherwise = asal n (i+1)
