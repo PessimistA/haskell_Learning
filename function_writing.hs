@@ -77,3 +77,10 @@ take22:: [a]->Int -> Int -> [a]
 take22 [] _ _ =[]
 take22 (x:xs) n j |j == n 	=[]
 	    	  |otherwise= x : take22 xs n (j+1) 
+
+
+//After midterm
+
+printN :: Int -> String
+printN 0 = ""
+printN n = printN (n - 1) ++ show n ++ "\n "
